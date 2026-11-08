@@ -7,8 +7,8 @@ var CONFIG = {
   heroCaption: "Ganda",
   reasons: [
     "The way you laugh at my jokes kahit di siguro nakakatawa",
-    "How you make time to chat with me even though busy ka po minsan",
-    "Your kindness po, understanding kahit walang kwenta mga sinasabi ko minsan",
+    "How you still make time for me kahit busy ka po minsan",
+    "Your kindness po, lagi ako pinapatawad hehe HAHAHAHA",
     "The way you make me feel special, special child EME HAHAHAHA",
     "You, exactly as you are. IKAW NA PO YAN EH"
   ],
@@ -18,11 +18,11 @@ var CONFIG = {
   ],
   letter: [
     "Happy birthday, Gracelle. Ingatan at samahan nawa po palagi",
-    "Thank you for being patient with me kahit laging nang aasar HAHAHA, and for making me smile on the hardest days.",
-    "Salamat sa Dios sa panibagong taon na ipinagkaloob po sa iyo, loobin mas marami pa sanang madagdag"
+    "Thank you for being patient with me kahit laging nang aasar HAHAHA, and for making me smile po lagi as in lagi",
+    "I just want you to know that I really like you po. loobin po na dumating na yung time na pwede na po, I really want to pursue you po and ligawan ka promise po, hehe yun lang po"
   ],
   footer: "Happy Birthday po ulit hehe" 
-  ,secret: "I wanna be your endgame"
+  ,secret: "I wanna be your endgame, I love you po"
 };
 /* ------------------------------------ */
 
