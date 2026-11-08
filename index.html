@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Great+Vibes&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="bow" viewBox="0 0 60 40"><path d="M30 20C20 0 2 2 3 20c1 18 17 20 27 0z" fill="var(--bow)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M30 20C40 0 58 2 57 20c-1 18-17 20-27 0z" fill="var(--bow)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="30" cy="20" r="6.5" fill="var(--bow)" stroke="var(--ink)" stroke-width="2.5"/></symbol>
+<symbol id="heart" viewBox="0 0 24 22"><path d="M12 21C-6 8 3-4 12 5c9-9 18 3 0 16z" fill="var(--flamingo)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<header class="hero" id="top">
+  <div class="deco" aria-hidden="true">
+    <svg style="left:6%;top:6%;animation-delay:-1s"><use href="#bow"/></svg>
+    <svg style="right:7%;top:10%;animation-delay:-2.5s"><use href="#bow"/></svg>
+    <svg style="left:8%;top:58%;animation-delay:-3s"><use href="#bow"/></svg>
+    <svg style="right:6%;top:72%;animation-delay:-.5s"><use href="#bow"/></svg>
+    <svg class="h" style="left:26%;top:4%;animation-delay:-1.7s"><use href="#heart"/></svg>
+    <svg class="h" style="right:28%;top:5%;animation-delay:-2.2s"><use href="#heart"/></svg>
+    <svg class="h" style="left:3%;top:34%;animation-delay:-.8s"><use href="#heart"/></svg>
+    <svg class="h" style="right:4%;top:42%;animation-delay:-3.4s"><use href="#heart"/></svg>
+    <svg class="h" style="left:20%;bottom:5%;animation-delay:-1.3s"><use href="#heart"/></svg>
+    <svg class="h" style="right:22%;bottom:4%;animation-delay:-2.9s"><use href="#heart"/></svg>
+  </div>
+  <p class="lead" id="lead">Happy birthday,</p>
+  <h1 id="name">Juan</h1>
+
+  <div class="stage">
+    <figure class="frame" id="heroFrame"></figure>
+
+    <svg class="cake" id="cake" viewBox="0 0 340 260" role="group" aria-label="Birthday cake with three candles">
+      <g id="candles">
+        <g class="candle" role="button" aria-label="Blow out candle 1">
+          <rect class="hit" x="96" y="38" width="28" height="86" fill="transparent"/>
+          <rect x="106" y="74" width="8" height="50" rx="2" fill="var(--flamingo)"/>
+          <path class="flame" d="M110 42c10 14 8 26 0 30-8-4-10-16 0-30z" fill="#ffb23f"/>
+          <path class="smoke" d="M110 60c-6-8 6-14 0-24" stroke="var(--muted)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="candle" role="button" aria-label="Blow out candle 2">
+          <rect class="hit" x="156" y="26" width="28" height="98" fill="transparent"/>
+          <rect x="166" y="62" width="8" height="62" rx="2" fill="var(--blush)"/>
+          <path class="flame" d="M170 30c10 14 8 26 0 30-8-4-10-16 0-30z" fill="#ffb23f"/>
+          <path class="smoke" d="M170 48c-6-8 6-14 0-24" stroke="var(--muted)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="candle" role="button" aria-label="Blow out candle 3">
+          <rect class="hit" x="216" y="38" width="28" height="86" fill="transparent"/>
+          <rect x="226" y="74" width="8" height="50" rx="2" fill="var(--flamingo)"/>
+          <path class="flame" d="M230 42c10 14 8 26 0 30-8-4-10-16 0-30z" fill="#ffb23f"/>
+          <path class="smoke" d="M230 60c-6-8 6-14 0-24" stroke="var(--muted)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+      </g>
+      <rect x="70" y="124" width="200" height="56" rx="14" fill="#fff3ec"/>
+      <path d="M70 142c14 0 14 16 28 16s14-16 28-16 14 16 28 16 14-16 28-16 14 16 28 16 14-16 28-16 14 16 28 16v-4c0-9-7-14-14-14H84c-7 0-14 5-14 14z" fill="var(--flamingo)"/>
+      <use href="#bow" x="50" y="110" width="56" height="38" transform="rotate(-12 78 129)"/>
+      <rect x="40" y="180" width="260" height="62" rx="16" fill="var(--blush)"/>
+      <circle cx="90" cy="211" r="5" fill="#fff3ec"/><circle cx="170" cy="211" r="5" fill="#fff3ec"/><circle cx="250" cy="211" r="5" fill="#fff3ec"/>
+      <rect x="20" y="242" width="300" height="10" rx="5" fill="var(--blush)" opacity=".6"/>
+    </svg>
+  </div>
+
+  <form class="gate" id="gate">
+    <label for="bday">Enter your birthday po</label>
+    <div class="row">
+      <input type="text" id="bday" inputmode="numeric" autocomplete="off" placeholder="mm/dd/yy" maxlength="8" aria-describedby="err">
+      <button class="btn" type="submit">Light them</button>
+    </div>
+    <p class="err" id="err" role="alert"></p>
+  </form>
+
+  <p class="hint" id="hint" aria-live="polite"></p>
+  <button class="btn go" id="go" type="button">Open your surprise po🎀</button>
+</header>
+
+<main id="main">
+  <section>
+    <div class="inner">
+      <h2>Random Things I love about you</h2>
+      <ul class="reasons" id="reasons"></ul>
+    </div>
+  </section>
+
+  <section class="band" id="album">
+    <div class="inner wide">
+      <h2>photos</h2>
+      <p class="sub">Tap a photo to see it bigger.</p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="letterSec">
+    <div class="inner letter">
+      <h2>A little note</h2>
+      <div id="letter"></div>
+      <p class="sign" id="sign"></p>
+    </div>
+  </section>
+  <footer id="foot"></footer>
+  <div class="secretwrap">
+  <button class="secret" id="secret" type="button" aria-label="A little secret">♥</button>
+  <p class="secretmsg" id="secretMsg" hidden></p>
+</div>
+</main>
+
+<dialog id="lb"><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
